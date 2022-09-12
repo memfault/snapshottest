@@ -1,3 +1,5 @@
+> **NOTE:** this is a fork to fix https://github.com/syrusakbary/snapshottest/issues/73
+
 # SnapshotTest [![travis][travis-image]][travis-url] [![pypi][pypi-image]][pypi-url]
 
 [travis-image]: https://img.shields.io/travis/syrusakbary/snapshottest.svg?style=flat
@@ -74,7 +76,7 @@ Check the [Django example](https://github.com/syrusakbary/snapshottest/tree/mast
 
 ## Disabling terminal colors
 
-Set the environment variable `ANSI_COLORS_DISABLED` (to any value), e.g. 
+Set the environment variable `ANSI_COLORS_DISABLED` (to any value), e.g.
 
     ANSI_COLORS_DISABLED=1 pytest
 
@@ -88,7 +90,7 @@ make develop
 ```
 
 After developing, ensure your code is formatted properly by running:
- 
+
 ```sh
 make format-fix
 ```
@@ -101,7 +103,7 @@ make lint
 make test
 ```
 
-To test locally on all supported Python versions, you can use 
+To test locally on all supported Python versions, you can use
 [tox](https://tox.readthedocs.io/):
 
 ```sh

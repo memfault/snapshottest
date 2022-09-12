@@ -255,7 +255,10 @@ class SnapshotTest(object):
             try:
                 prev_snapshot = self.module[self.test_name]
             except SnapshotNotFound:
-                self.store(value)  # first time this test has been seen
+                if self.update:
+                    self.store(value)  # first time this test has been seen
+                else:
+                    raise
             else:
                 try:
                     self.assert_value_matches_snapshot(value, prev_snapshot)
